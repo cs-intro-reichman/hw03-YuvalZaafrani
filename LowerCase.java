@@ -11,7 +11,18 @@ public class LowerCase {
     * Non-letter characters are left as is.
     */
     public static String lowerCase(String s) {
-        // Replace the following statement with your code
-        return null;
+        int stringLength = s.length(); // the lenght represents the number of the loop iteration
+        String lowerCaseS = ""; // The new string to be returned - will eventually be s as lowecase
+        for (int i = 0; i <= stringLength-1; i++) { //loop to go through all characters in s
+            char charI = s.charAt(i);
+            char newCharI = charI;
+            int asciiChar = charI;
+            if (asciiChar >= 65){
+                newCharI = Character.toLowerCase(charI);
+            };
+            lowerCaseS = lowerCaseS + newCharI;
+
+        };
+        return lowerCaseS;
     }
-}
+} 
