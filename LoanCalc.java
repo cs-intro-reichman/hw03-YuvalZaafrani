@@ -30,6 +30,7 @@ public class LoanCalc {
 		System.out.printf("%.2f", bisectionSolver(loan, rate, n, epsilon));
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
+		System.out.println();
 	}
 	
 	/**
