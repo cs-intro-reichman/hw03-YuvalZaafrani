@@ -7,7 +7,7 @@ public class Calendar {
 	static int month = 1;
 	static int year = 1900;
 	static int dayOfWeek = 2;     // 1.1.1900 was a Monday
-	static int nDaysInMonth = 31; // Number of days in January
+	static int nDaysInMonth = 31; // Number of days in Jsanuary
 	
 	/** 
 	 * Prints the calendars of all the years in the 20th century. Also prints the  
@@ -18,11 +18,21 @@ public class Calendar {
 	    // Prints each date dd/mm/yyyy in a separate line. If the day is a Sunday, prints "Sunday".
 	    // The following variable, used for debugging purposes, counts how many days were advanced so far.
 	    int lastYear = Integer.parseInt(args[0]);
-	    int debugDaysCounter = 0; 
+	    int debugDaysCounter = 0;
+	    int countSunday = 0; 
 	    //// Write the necessary initialization code, and replace the condition
 	    //// of the while loop with the necessary condition 
 	 	while (month != 1 || dayOfMonth != 1 || year != lastYear + 1) {
 	 		String date = dayOfMonth + "/" + month + "/" + year;
+	 		boolean thisIsSunday = (dayOfWeek == 1);
+
+	 		if (thisIsSunday) {
+	 			date += " sunday";
+	 			if (dayOfMonth == 1){
+	 				countSunday++;
+	 			}
+
+	 		}
 
 	 		System.out.println(date);
 
@@ -30,10 +40,11 @@ public class Calendar {
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	
+
 
 	 		
         }
+        System.out.println("During the 20t centry, " + countSunday +" Sundays fell on the first day of the month");
 
 	 	
 	 }
