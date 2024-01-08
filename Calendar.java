@@ -30,7 +30,7 @@ public class Calendar {
 	 		boolean thisIsSunday = (dayOfWeek == 1);
 
 	 		if (thisIsSunday) {
-	 			date += " sunday";
+	 			date += " Sunday";
 	 			if (dayOfMonth == 1){
 	 			}
 
